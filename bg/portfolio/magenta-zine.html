@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ZT Code Craft | Magenta Zine</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="ZT Code Craft - Website development and brand establishment">
+    <meta name="keywords" content="уебсайт дизайн, изработка уебсайтл, уебсайт, бранд, бранд стратегия , website design, website development, branding, brand establishment, creative agency, e-commerce, software, web studio, dark mode, html5, css3, javascript, creative">
+    <meta name="author" content="ZT Code Craft">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/logo-item.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/logo-item.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/logo-item.png">
+    <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="../../assets/img/logo-item.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../../assets/img/logo-item.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Istok+Web&family=Manrope&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/aos/dist/aos.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/swiper/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/zt-theme.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper bg-secondary">
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+      <header class="navbar navbar-expand-lg bg-nav">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">
+            <span class="text-primary flex-shrink-0 me-2">
+              <img src="../../assets/img/logo.png" width="150" height="50" >     
+            </span>
+          </a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label for="theme-mode" class="form-check-label">
+              <i class="ai-sun fs-lg"></i>
+            </label>
+            <label for="theme-mode" class="form-check-label">
+              <i class="ai-moon fs-lg"></i>
+            </label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav order-lg-3 d-none d-lg-inline-flex">
+            <li class="nav-item">
+              <a href="/bg/services.html" class="nav-link">BG</a>
+            </li>
+            <li class="nav-item separator line-lang d-sm-inline"> | </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">EN</a>
+            </li>
+          </ul>
+          <nav class="collapse navbar-collapse" id="navbarCollapse2">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="../services.html">Услуги</a></li>
+              <li class="nav-item"><a class="nav-link" href="../portfolio.html">Проекти</a></li>
+              <li class="nav-item"><a class="nav-link" href="../contacts.html">Контакти</a></li>
+              <li class="nav-item fs-sm d-lg-none mb-lg-0"><a class="nav-link" href="#">BG</a></li>
+              <li class="nav-item fs-sm d-lg-none mb-lg-0"><a class="nav-link" href="/en/portfolio/magenta-zine.html">EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="position-relative mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"></div>
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative zindex-2 py-5 pb-lg-0">
+          <!-- Breadcrumb-->
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Начало</a></li>
+              <li class="breadcrumb-item"><a href="../portfolio.html">Проекти</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Magenta Zine</li>
+            </ol>
+          </nav>
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5"><img class="d-block order-lg-2 me-auto me-lg-0 ms-auto" src="../../assets/img/portfolio/single/magenta-zine.png" width="480" alt="Image">
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-2 text-uppercase pb-3 pb-lg-4">Дигитална Трансформация за Писатели</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">
+                Създаване на уеб платформа, която подбужда креативността и дава възможност на бизнеса за монетизация.
+              </p>
+            </div>
+          </div>
+          <ul class="nav justify-content-center justify-content-lg-start mx-n2 pt-lg-5 mb-0">
+            <li class="nav-item me-3"><a class="nav-link p-2" href="https://www.instagram.com/magentazine_com/" target="_blank">Instagram</a></li>
+            <li class="nav-item me-3"><a class="nav-link p-2" href="#" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- Page content-->
+      <section class="container overflow-hidden pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+          <!-- Sticky sidebar with brief-->
+          <div class="col-md-3 col-lg-2">
+            <div class="d-flex d-md-block flex-wrap position-sticky top-0">
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-muted mb-2">Бизнес</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Magenta Zine</li>
+                  <li class="d-block py-1">5-10 служители</li>
+                  <li class="d-block py-1">София, България</li>
+                  <li class="d-block py-1"><a class="text-dark" href="#" target="_blank">Посетете уебсайта</a></li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-muted mb-2">Сфера на бизнеса</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Дигитални Публиказии и Литература</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-muted mb-2">Услуги</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Разработка на уеб платформа</li>
+                  <li class="d-block py-1">Управление на съдържанието</li>
+                  <li class="d-block py-1">Допълнителни функционалности</li>
+                  <li class="d-block py-1">Помощ с брандинг</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4">
+                <h2 class="fs-base fw-normal text-muted mb-2">Времетраене на проекта</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">2023, 3-4 месеза</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Description-->
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+              <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+                <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4">
+                  Открийте как трансформирахме онлайн пространството на Magenta Zine, давайки възможност на бизнеса да контролира и създава съдържание, както и да си осигурява на приходи за траен успех.
+                </p>
+              </div>
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">За клиента</h2>
+              <p class="fs-lg">
+                Нашето сътрудничество доведе до онлайн пространство, което служи както за динамичен журнал, така и като централна платформа за различни творци.
+                Magenta Zine кани както начинаещи, така и опитни писатели да споделят, обсъждат и създават, насърчавайки жизнена общност в съвременния литературен свят.
+              </p>
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Предизвикателството</h2>
+              <p class="fs-lg">
+                Magenta Zine се изправи пред предизвикателството да създаде удобна за потребителя мрежа, която не само отпразнува творбите на творческата платформа на жени и небинарни писатели, но също така даде възможност на собствениците на бизнеса
+                безпроблемно да създават и редактират съдържанието с помощта на Markdown файлове. Освен това за да отразява дигиталното пространство тяхната мисия, се изисква внимателно интегриране на брандинг елементи,
+                и цветови гами, вдъхновени от магента и розовата палитра. Балансирайки естетическата привлекателност с практичната функционалност, Magenta Zine раздели разнообразното си съдържание на отделни
+                секции, като същевременно включва функции като споделяне в социални медии, абонаменти за бюлетин и интегрирация за дарения.
+              </p>
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Решението</h2>
+              <p class="fs-lg mb-0">
+                В отговор на предизвикателството на Magenta Zine, ние създадохме уеб платформа, която безпроблемно съчетава визуална естетика с функционалността.
+                Предоставихме ръководства на клиента и обучение, за да осигурим плавен преход за собствениците на компанията, управляващи съдържанието чрез Markdown файлове.
+                Съобразявайки се с тяхната мисия, ние подбрахме бранд цветове, центрирани около цвета магента, допълнен от хармонична розова палитра.
+                Нашето сътрудничество включи оформлението на платформата с две ревизии, типовете публикации - истории, поезия и статии.
+                Освен това въведохме специален раздел за подбрани публикации, споделяне в социални мрежи с едно кликване, абонаменти за бюлетин и бутон за дарения, стратегически допринасяйки за усилията на Magenta Zine за осигуряване на приходи.
+                Включването на Google Analytics допълнително им дава възможност да проследяват ангажираността на потребителите и да прецизират дигиталната си стратегия.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Images-->
+        <div class="position-relative w-100 mx-auto pb-4 pb-sm-3 pb-md-4" style="max-width: 1043px;">
+          <img class="d-block position-relative zindex-5" src="../../assets/img/portfolio/single/2.png" alt="Image" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="250">
+          <img class="d-block position-absolute top-0 start-0 " src="../../assets/img/portfolio/single/3.png" alt="Image" data-aos="zoom-in" data-aos-duration="1200" data-aos-offset="250">
+          <img class="d-block position-absolute top-0 start-0 zindex-1" src="../../assets/img/portfolio/single/4.png" alt="Image" data-aos="fade-down" data-aos-duration="800" data-aos-offset="250">
+          <img class="d-block d-dark-mode-none position-absolute top-0 start-0 zindex-2" src="../../assets/img/portfolio/single/5.png" alt="Image" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="250">
+          <img class="d-none d-dark-mode-block" src="" width="">
+        </div>
+        <!-- Results-->
+        <div class="row pt-1 pt-sm-3 pt-md-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8 pb-1 pb-sm-3 pb-md-4">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Резултати</h2>
+            <p class="fs-lg mb-0">
+              Magenta Zine вече се радва на интуитивното за потребителя пространство, където писателите могат да споделят творбите си.
+              С включването на стратегически функции като <b>споделяне в социални медии, абонаменти за бюлетин и бутон за интегриране на дарения</b>, Magenta Zine успешно инициира усилия за осигуряване на приходи и използва <b>Google Анализ</b> за проследяване и прецизиране на ангажираността на потребителите.
+            </p>
+          </div>   
+      </section>
+      <!-- Parallax background image-->
+      <section class="jarallax" data-jarallax data-speed="0.6">
+        <div class="ratio ratio-16x9"></div>
+        <div class="jarallax-img" style="background-image: url(../../assets/img/portfolio/single/mockups.png);"></div>
+      </section>
+      <!-- Testimonials (Carousel)-->
+      <section class="container position-relative zindex-2 py-5 mt-n1 mt-sm-0 mb-1 my-md-3 my-lg-3 my-xl-4 my-xxl-5">
+        <div class="row py-md-4 py-lg-5">
+          <div class="col-md-9 col-lg-7 order-md-2">
+            <!-- Swiper slider-->
+            <div class="swiper" data-swiper-options="{
+            &quot;spaceBetween&quot;: 40,
+            &quot;loop&quot;: true,
+            &quot;bindedContent&quot;: true,
+            &quot;autoHeight&quot;: true,
+            &quot;pagination&quot;: {
+              &quot;el&quot;: &quot;.testimonials-count&quot;,
+              &quot;type&quot;: &quot;fraction&quot;
+            },
+            &quot;navigation&quot;: {
+              &quot;prevEl&quot;: &quot;#prev-testimonial&quot;,
+              &quot;nextEl&quot;: &quot;#next-testimonial&quot;
+            }
+          }">
+            
+              <div>
+                <!-- Item-->
+                <div>
+                  <div class="d-flex d-md-none pt-3 mb-3"><i class="ai-quotes d-md-none text-primary display-3 mt-n2"></i>
+                    <div class="ps-3">
+                      <h3 class="h5 mb-0">Златица Маркова</h3>
+                      <p class="text-muted mb-0">Собственик на Magenta Zine</p>
+                    </div>
+                  </div>
+                  <h2 class="mb-lg-4">Awesome experience with a professional team. Thank you :)</h2>
+                  <p class="lead mb-0">Suspendisse mauris elit, pellentesque nec purus sed, finibus finibus ipsum. Proin posuere, metus sed porttitor pellentesque, ante magna tincidunt mi, nec fermentum dui ligula vel massa. Praesent ultrices iaculis arcu iaculis ultrices. Maecenas vitae nulla odio. In laoreet, lectus in tempus ultricies.  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 offset-lg-1 order-md-1 mt-n3"><i class="ai-quotes d-none d-md-block text-primary ms-n2 mb-1" style="font-size: 150px;"></i>
+            <!-- Contnetn binded to slider (on screens > 768px)-->
+            <div class="binded-content h-auto d-none d-md-block">
+              <div class="binded-item h-auto active" id="testimonial-1">
+                <h3 class="h5 mb-1">Златица Маркова</h3>
+                <p class="text-muted mb-0">Собственик на Magenta Zine</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Other projects-->
+      <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <h2 class="h1 pb-3 pb-lg-4">Следващ проект</h2>
+        <div class="row row-cols-1 row-cols-sm-2 align-items-end mb-2 pb-md-4">
+          <div class="col">
+            <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 550px;">
+              <div class="zoom-effect-wrapper">
+                <div class="zoom-effect-img"><img src="../../assets/img/portfolio/grid/part.png" alt="Image"></div>
+              </div>
+              <div class="pt-4 mt-lg-2">
+                <h2 class="h4 mb-2"><a class="stretched-link" href="partdepot.html">PArt Depot</a></h2>
+                <div class="d-flex justify-content-between fs-lg text-muted"><span>Уебсайт, Интеграция на График</span><span>2023</span></div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer py-5">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4" href="../index.html"><span class="text-primary flex-shrink-0 me-2">
+            <img src="../../assets/img/logo.png" width="150" height="50" >     
+            </span></a>
+            <p class="fs-sm pb-2 pb-lg-3 mb-3">Изграждаме вашия бранд в технологичното пространство.</p>
+          </div>
+          <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+            <ul class="nav flex-column">
+              <li><a class="nav-link py-1 px-0" href="../services.html">Услуги</a></li>
+              <li><a class="nav-link py-1 px-0" href="../portfolio.html">Портфолио</a></li>
+              <li><a class="nav-link py-1 px-0" href="../privacy-policy.html">Политики</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+            <ul class="nav flex-column">
+              <li><a class="nav-link py-1 px-0" href="mailto:ztcodecraft@gmail.com">ztcodecraft@gmail.com</a></li>
+              <li><a class="nav-link py-1 px-0" href="tel:+359 879227393">+359 879227393</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+            <h3 class="h6 mb-2">Последвайте ни в социалните мрежи</h3>
+            <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i class="ai-facebook"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i class="ai-instagram"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i class="ai-linkedin"></i></a></div>
+          </div>
+        </div>
+        <p class="fs-sm mb-0"><span class="opacity-70">&copy; Всички права запазени. Създадено от </span><a class="nav-link d-inline fw-normal p-0" href="index.html" rel="noopener">ZT Code Craft</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll>
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg><i class="ai-arrow-up"></i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

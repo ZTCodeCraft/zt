@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ZT Code Craft | Услуги</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="ZT Code Craft - Website development and brand establishment">
+    <meta name="keywords" content="уебсайт дизайн, изработка уебсайтл, уебсайт, бранд, бранд стратегия , website design, website development, branding, brand establishment, creative agency, e-commerce, software, web studio, dark mode, html5, css3, javascript, creative">
+    <meta name="author" content="ZT Code Craft">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo-item.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo-item.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo-item.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="../assets/img/logo-item.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../assets/img/logo-item.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Istok+Web&family=Manrope&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../assets/css/zt-theme.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper bg-secondary">
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+      <header class="navbar navbar-expand-lg bg-nav">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <span class="text-primary flex-shrink-0 me-2">
+              <img src="../assets/img/logo.png" width="150" height="50" >     
+            </span>
+          </a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label for="theme-mode" class="form-check-label">
+              <i class="ai-sun fs-lg"></i>
+            </label>
+            <label for="theme-mode" class="form-check-label">
+              <i class="ai-moon fs-lg"></i>
+            </label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav order-lg-3 d-none d-lg-inline-flex">
+            <li class="nav-item">
+              <a href="#" class="nav-link">BG</a>
+            </li>
+            <li class="nav-item separator line-lang d-sm-inline"> | </li>
+            <li class="nav-item">
+              <a href="/en/services.html" class="nav-link">EN</a>
+            </li>
+          </ul>
+          <nav class="collapse navbar-collapse" id="navbarCollapse2">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Проекти</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+              <li class="nav-item fs-sm d-lg-none mb-lg-0"><a class="nav-link" href="#">BG</a></li>
+              <li class="nav-item fs-sm d-lg-none mb-lg-0"><a class="nav-link" href="/en/services.html">EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="bg-secondary py-5">
+        <div class="container pb-lg-2 pb-xl-4 py-xxl-5">
+            <!-- Breadcrumb-->
+            <nav aria-label="breadcrumb">
+              <ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Начало</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Услуги</li>
+              </ol>
+            </nav>
+          <!-- Page title-->
+
+          <h1 class="display-2 mb-4 text-center zt-blue">Нашите услуги</h1>
+          <p class="text-center pb-4 mb-2 mb-lg-3 fw-500 subheading-font">
+            ZT Code Craft е креативно студио, специализиращо в<br>
+            <b class="zt-pink">уебсайт разработване и брандинг,</b><br>
+            целящо да подпомага развиването на вашия бизнес.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Services-->
+      <div class="container py-4">
+        <!-- Item-->
+        <section class="row align-items-center pb-5 py-xl-5 my-2" id="quick-website">
+          <div class="col-md-6 offset-xl-1 order-md-2 pb-2 mb-4 mb-md-0"><img class="rounded-5" src="../assets/img/services/web-2.png" alt="Image"></div>
+          <div class="col-md-6 col-xl-5 order-md-1">
+            <div class="pe-md-4 pe-xl-0 pb-4">
+              <h2 class="h1 pb-2 pb-lg-3 zt-blue">Уебсайт За 2 Седмици</h2>
+                <dl class="pb-2">
+                  <dt>Бърза Изработка</dt>
+                  <dd>Изградете бизнеса си онлайн бързо с напълно функционален уебсайт само за две седмици.</dd>
+                  <dt>Включени Основните Страници</dt>
+                  <dd>
+                    Получавате <b class="zt-pink">до 5 страници</b>, включващи опции като 
+                    Начална страница, За нас, Контакти, Меню/График и карта.
+                    Имате възможността да изберете какви страници биха най-подходящи за вашияте бизнес нужди.
+                    Те ще бъдат модифицирани по <b class="zt-pink"></b>нашите подбрани шаблони</b>, за да иглеждат професионално и модерно.
+                  </dd>
+                  <dt>Без допълнителни разходи, без месечни такси</dt>
+                  <dd>
+                    Всичко, от което се нуждаете за вашия уебсайт, 
+                    включително хостинг (място, където вашият уебсайт се намира в интернет) и сигурност (SSL), се покрива с едно плащане.
+                    Освен това няма допълнителни месечни такси.
+                  </dd>
+                </dl>
+              <div class="row row-cols-2 mb-4">
+                <h4 class="h5 mb-2">Цена: <b class="text-price"> 450лв. </b></h4>
+                <a class="btn btn-primary" href="contacts.html">Нека работим заедно</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Item-->
+        <section class="row align-items-center pb-5 py-xl-5 my-2" id="custom-website">
+          <div class="col-md-6 pb-2 mb-4 mb-md-0"><img class="rounded-5" src="../assets/img/services/integrations-2.png" alt="Image"></div>
+          <div class="col-md-6 col-xl-5 offset-xl-1">
+            <div class="ps-md-4 pe-xl-0">
+              <h2 class="h1 pb-2 pb-lg-3 zt-pink">Персонализиран Уебсайт</h2>
+              <dl class="pb-2">
+                <dt>Персонализиран Дизайн</dt>
+                <dd>
+                  Нашият екип ще си сътрудничи с вас, за да разработим персонализиран дизайн, който перфектно отразява индивидуална идентичност на вашият бизнес, гарантирайки единствен по рода си и открояващ се онлайн дизайн.
+                </dd>
+                <dt>Динамични Функционалности</dt>
+                <dd>Интегрирайте функционалности като <b class="zt-pink">системиа за резервация, плащания с карта, клиентски формуляри, имейл интеграции, бюлетини, дарения</b>и други.</dd>
+                <dt>Удобва Система за Управление на Съдържание (CMS)</dt>
+                <dd>Управление и ъпдейтвайте части от уебсайта самостоятелно.</dd>
+              </dl>
+              <a class="btn btn-primary" href="contacts.html">Нека работим заедно</a>
+            </div>
+          </div>
+        </section>
+        <!-- Item-->
+        <section class="row align-items-center pb-5 py-xl-5 my-2" id="branding">
+          <div class="col-md-6 offset-xl-1 order-md-2 pb-2 mb-4 mb-md-0"><img class="rounded-5" src="../assets/img/services/brand-2.png" alt="Image"></div>
+          <div class="col-md-6 col-xl-5 order-md-1">
+            <div class="pe-md-4 pe-xl-0">
+              <h2 class="h1 pb-2 pb-lg-3 zt-blue">Брандинг</h2>
+              <dl class="pb-2">
+                <dt>Бранд Насоки</dt>
+                <dd>Установаме ясни насоки за консистентното използване на елементите на вашия бранд.</dd>
+                <dt>Лого Дизайн</dt>
+                <dd>Уникално и професионално лого, което представя вашата бизнес идентичност.</dd>
+                <dt>Персонализирана Цветова Палитра и Избор на Типография</dt>
+                <dd>Personalized color scheme and typography that resonates with your brand.</dd>
+                <dt>Постове за Социани Мрежи</dt>
+                <dd>Персонализирани графики и банери за активно присъствие в социалните медии.</dd>
+                <dt>Брандирани Шаблони</dt>
+                <dd>Шаблони за документи или презентации за поддържане на консистентен вид и усещане.</dd>
+                <dt>Анализ на Конкурентите</dt>
+                <dd>Анализ на конкурентите бизнеси, с цел по-добро позиционирате на пазара.</dd>
+                <dt>Поддръжка и Помощ</dt>
+                <dd>Ние предоставяме подкрепа и насоки, докато брандът се установява и развива.</dd>
+              </dl>
+              <a class="btn btn-primary" href="contacts.html">Нека работим заедно</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works (Steps)-->
+      <section class="bg-secondary pt-2 mt-md-3 mt-lg-2 mt-xl-4 mt-xxl-3 pb-5">
+        <div class="container pt-2 pt-sm-4 pt-lg-5">
+          <h2 class="h1 text-center pb-3 mb-3 mb-lg-4">Как работи процесът?</h2>
+          <!-- Step-->
+          <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+            <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="pe-md-4 pe-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Стъпка 01</span>
+                <h3 class="h2 mb-3 mb-lg-4">Провеждаме Консултация, Дефинираме Целите</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                  Започнете, като насрочите разговор с нас. Ще се потопим във вашите бизнес нужди,
+                  обсъдим кои услуги отговарят на вашите цели и конкретни изисквания, за да осъществим вашата визия.
+                  В тази стъпка от процеса ще обсъдим времеви рамки, изисквания и ценообразуване.
+                </p><a class="btn btn-outline-primary rounded-pill" href="/contacts.html">Насрочване на консултация</a>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow-->
+          <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-offset="250">
+            <svg class="d-block text-primary" width="339" height="365" viewBox="0 0 339 365" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -150px; margin-top: -140px; margin-bottom: -108px;">
+              <path d="M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606" stroke="url(#arrow1)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+              <path d="M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z" fill="currentColor"></path>
+              <defs>
+                <linearGradient id="arrow1" x1="324" y1="291.5" x2="-2.99974" y2="72.4997" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="currentColor"></stop>
+                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Step-->
+          <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+            <div class="col-md-6 col-xl-5 offset-xl-1 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="ps-md-4 ps-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Стъпка 02</span>
+                <h3 class="h2 mb-3 mb-lg-4">Фаза на Разработване - Вашата Визия и Начин</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                  Във фазата на разработка, независимо дали става въпрос за изграждане на уебсайт или дефиниране на вашия бранд, контролът е във вашите ръце. 
+                  Можете да сте включени в процеса, както предпочитате, или да поверете всичко на нас – знаем, че вашето време е ценно.
+                  Нашата цел е сътрудничество, което да гарантира, че проектът ви отразява вашата уникална идентичност.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow-->
+          <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-offset="250">
+            <svg class="d-block text-primary" width="263" height="275" viewBox="0 0 263 275" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: -60px; margin-left: -120px; margin-bottom: -80px;">
+              <path d="M8.13678 249.647C7.47108 250.081 6.59001 249.602 6.59106 248.808L6.60444 238.689C6.60544 237.931 7.4158 237.45 8.08162 237.811L16.5478 242.408C17.2136 242.77 17.2512 243.712 16.6163 244.125L8.13678 249.647Z" fill="currentColor"></path>
+              <path d="M261.961 37.8891C216.908 65.6243 128.226 135.486 133.916 193.05C141.029 265.005 265.134 173.468 173.666 148.634C89.2542 125.715 30.9125 210.547 13.9796 236.702" stroke="url(#arrow2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+              <defs>
+                <linearGradient id="arrow2" x1="13.9797" y1="234.5" x2="276.704" y2="60.1939" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="currentColor"></stop>
+                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Step-->
+          <div class="row align-items-center position-relative">
+            <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 d-md-flex justify-content-end pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="pe-md-4 pe-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Стъпка 03</span>
+                <h3 class="h2 mb-3 mb-lg-4">Вашият Проект и Успех</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                  Последната стъпка е предаването на проекта. Вашият напълно разработен уебсайт или утвърден бранд е вече готова за своя дебют.
+                  Оборудвани сте с инструментите за дигитален успех.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ (Accordion)-->
+      <section class="py-5">
+        <div class="container py-lg-3 py-xl-5">
+          <div class="row pt-1 pb-2 py-sm-4">
+            <div class="col-md-4 text-center text-md-start">
+              <h2 class="h1 zt-blue">Имате въпроси?</h2>
+              <p class="pb-3 pb-sm-4 zt-pink">Не намерихте това, което търсите тук? Свържете се с нас.</p>
+              <div class="d-none d-md-flex justify-content-center">
+                <svg class="zt-pink ms-n4" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="col-md-8 col-lg-7 offset-lg-1">
+              <div class="accordion" id="faq">
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#questionOne" aria-expanded="true" aria-controls="questionOne">Колко струва изработка на уебсайт?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse show" id="questionOne" aria-labelledby="headingOne" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      За статичен уебсайт цената е 450лв.
+                      Допълнителни функции, като интеграции или персонализирани илюстрации, обаче може да наложат допълнителни такси въз основа на вашите специфични изисквания.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">Има ли допълнителни разходи?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="questionTwo" aria-labelledby="headingTwo" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      <b>Обикновено няма допълнителни разходи!</b> За разлика от платформи като WordPress, Wix и други CRM, които често включват месечни такси,
+                      нашият модел на еднократно плащане гарантира рентабилно и прозрачно решение.
+                      Освен това предлагаме безплатен хостинг за неограничено време и SSL сертификат, <b>премахвайки притесненията от месечни разходи</b>.
+                      Единствените потенциални допълнителни плащания биха били за избрания от вас домейн (приблизително 60лв на година) и ако желаете да актуализирате съдържанието на уебсайта си, след като е активен.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">Колко време отнема изработването на уебсайт?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="questionThree" aria-labelledby="headingTwo" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      Времето варира в зависимост от сложността на проекта. <b>За първия ни пакет - Уебсайт за Две Седмици,
+                      разработката отнема 2 седмици.</b> Ще ви предоставим приблизителна времева рамка по време на нашата първоначална консултация.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">Мога ли да актуализирам съдържанието на уебсайта си, след като е активен?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="questionFour" aria-labelledby="headingThree" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      Абсолютно! Ако предпочитате гъвкавост, <b>можем да правим промените вместо вас</b>. Просто заплатете за промените, които желаете.
+                      Като алтернатива <b>предлагаме и интегриране на системи за управление на съдържанието (CMS)</b>. Това означава, че имате възможността да правите чести актуализации на определени секции от уебсайта си,
+                      като графици или ресторантски менюта, без да се налагат допълнителни такси. Предоставяме обучение, за да гарантираме, че можете да управлявате тези актуализации лесно и уверено.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFive" aria-expanded="false" aria-controls="questionFive">Какво се случва, ако има технически проблеми с уебсайта ми?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="questionFive" aria-labelledby="headingFour" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      В малко вероятния случай уебсайтът ви да срещне технически проблеми, бъдете сигурни, че ще ви покрием.
+                      Свържете се с нас и <b>ние незабавно ще разгледаме и разрешим всякакви технически проблеми безплатно</b>.
+                      В ZT Code Craft вашият уебсайт е в добри ръце и ние гарантираме качеството на нашата услуга.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-light">
+                  <h3 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionSix" aria-expanded="false" aria-controls="questionSix">Можете ли да помогнете със създаването на съдържание и илюстрации за уебсайта?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="questionSix" aria-labelledby="headingFive" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm">
+                      Разбира се! Като част от нашата цялостна услуга за брандинг, ние предлагаме помощ при създаване на съдържание и илюстрации, за да гарантираме, че вашият уебсайт не само изглежда фантастично, но и разказва визуално завладяваща история.
+                      Позволете ни да вдъхнем живот на вашия бранд със завладяващо съдържание и привличащи погледа визуализации.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    </main>
+    <!-- Footer-->
+    <footer class="footer py-5">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4" href="../index.html"><span class="text-primary flex-shrink-0 me-2">
+            <img src="../assets/img/logo.png" width="150" height="50" >     
+            </span></a>
+            <p class="fs-sm pb-2 pb-lg-3 mb-3">Изграждаме вашия бранд в технологичното пространство.</p>
+          </div>
+          <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+            <ul class="nav flex-column">
+              <li><a class="nav-link py-1 px-0" href="services.html">Услуги</a></li>
+              <li><a class="nav-link py-1 px-0" href="portfolio.html">Портфолио</a></li>
+              <li><a class="nav-link py-1 px-0" href="privacy-policy.html">Политики</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+            <ul class="nav flex-column">
+              <li><a class="nav-link py-1 px-0" href="mailto:ztcodecraft@gmail.com">ztcodecraft@gmail.com</a></li>
+              <li><a class="nav-link py-1 px-0" href="tel:+359 879227393">+359 879227393</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+            <h3 class="h6 mb-2">Последвайте ни в социалните мрежи</h3>
+            <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i class="ai-facebook"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i class="ai-instagram"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i class="ai-linkedin"></i></a></div>
+          </div>
+        </div>
+        <p class="fs-sm mb-0"><span class="opacity-70">&copy; Всички права запазени. Създадено от </span><a class="nav-link d-inline fw-normal p-0" href="index.html" rel="noopener">ZT Code Craft</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll>
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg><i class="ai-arrow-up"></i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main theme script-->
+    <script src="../assets/js/theme.min.js"></script>
+  </body>
+</html>
