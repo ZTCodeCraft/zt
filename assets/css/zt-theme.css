@@ -547,7 +547,7 @@ progress {
 }
 
 .display-1 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.3;
 }
