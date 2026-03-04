@@ -1,0 +1,99 @@
+extends ../../layouts/_layout-bg.pug
+
+block vars
+  - var title = 'ZT Code Craft | BulYacht'
+  - var assetPath = '../../'
+  - var altLangUrl = '/en/portfolio/bulyacht.html'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/aos/dist/aos.css')
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.position-relative.mb-5
+    .bg-secondary.position-absolute.top-0.end-0.w-50.h-100.d-none.d-lg-block
+    .bg-secondary.position-absolute.top-0.end-0.w-100.h-100.d-lg-none
+    .container.position-relative.zindex-2.py-5.pb-lg-0
+      nav(aria-label='breadcrumb')
+        ol.pt-lg-2.pb-1.breadcrumb
+          li.breadcrumb-item: a(href='/bg/index.html') Начало
+          li.breadcrumb-item: a(href='/bg/portfolio.html') Проекти
+          li.breadcrumb-item.active(aria-current='page') BulYacht
+      .d-lg-flex.align-items-center.pt-3.pb-xxl-5
+        img.d-block.order-lg-2.me-auto.me-lg-0.ms-auto(src='../../assets/img/portfolio/bulyacht/hero.png' width='480' alt='Image')
+        .order-lg-1.text-center.text-lg-start.pe-lg-4.py-4.py-md-5
+          h1.display-2.text-uppercase.pb-3.pb-lg-4 Вашето морско приключение: BulYacht
+          p.fs-lg.mx-auto.mx-lg-0.mb-0(style='max-width: 530px;') Вашето мечтано пътешествие с BulYacht в Гърция.
+
+  //- Content
+  section.container.overflow-hidden.pt-lg-2.pt-xl-4.pt-xxl-5
+    .row.py-sm-3.py-md-4.py-lg-5
+      //- Sticky sidebar
+      .col-md-3.col-lg-2
+        .d-flex.d-md-block.flex-wrap.position-sticky.top-0
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Бизнес
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 BulYacht
+              li.d-block.py-1 5-10 служители
+              li.d-block.py-1 Гърция
+              li.d-block.py-1: a.text-dark(href='https://bulyacht.com/' target='_blank') Посетете уебсайта
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Сфера на бизнеса
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Туризъм
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Услуги
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Разработка на уебсайт
+              li.d-block.py-1 Допълнителни функционалности
+          .pb-3.mb-2.mb-lg-4
+            h2.fs-base.fw-normal.text-muted.mb-2 Времетраене на проекта
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 2024, 3-4 месеца
+
+      //- Description
+      .col-md-9.offset-lg-1
+        .ps-md-4.ps-lg-0
+          .border-bottom.pb-3.pb-sm-4.pb-lg-5.mb-4
+            p.text-dark.lead.mb-md-2.mb-lg-3.mb-xl-4 Открийте как създадохме елегантен и удобен за потребителя уебсайт за BulYacht, показващ техните луксозни пътувания с яхта в Гърция с подробна информация за дестинации, удобства, цени и наличност, за да подобрите изживяването при резервации.
+          h2.h1.pt-2.pt-sm-3.pt-md-4.pt-lg-5.pb-2 За клиента
+          p.fs-lg BulYacht е водеща чартърна компания за луксозни яхти, предлагаща ексклузивни пътувания из спиращите дъха води на Гърция. Специализирани в създаването на незабравими ветроходни изживявания, те се грижат за тези, които търсят необикновено пътешествие през зашеметяващите острови и крайбрежия на Гърция. Всяко пътуване е пригодено да осигури несравним комфорт и стил, осигурявайки незабравимо бягство.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 Предизвикателството
+          p.fs-lg BulYacht се нуждаеше от уебсайт, който ефективно да предава лукса и ексклузивността на техните пътувания с яхта, като същевременно предоставя важна информация на потенциални клиенти. Сайтът трябваше да покаже различни дестинации, удобства, цени и наличност в реално време, за да рационализира процеса на резервация. За уебсайта беше изключително важно да отразява идентичността на марката BulYacht и да предлага интуитивно потребителско изживяване.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 Решението
+          p.fs-lg.mb-0 Разработихме удобен за потребителя уебсайт, който улавя същността на луксозните предложения на BulYacht. Сайтът разполага със специални секции за дестинации, удобства, цени и наличност, което позволява на посетителите лесно да изследват и планират перфектното си пътуване с яхта. За да се приведем в съответствие с идентичността на марката BulYacht, ние се фокусирахме върху цветова схема, която съчетава синьо и тюркоазено, отразявайки живите цветове на морето. Адаптивният дизайн осигурява безпроблемна навигация на всички устройства, предоставяйки на потребителите първокласно онлайн изживяване.
+
+    //- Results
+    .row.pt-1.pt-sm-3.pt-md-4.pb-5.mb-md-2.mb-lg-3.mb-xl-4.mb-xxl-5
+      .col-md-11.col-lg-9.col-xl-8.pb-1.pb-sm-3.pb-md-4
+        h2.h1.pb-sm-2.pb-lg-3 Резултати
+        p.fs-lg.mb-0 Новият уебсайт успешно разшири онлайн присъствието на BulYacht, привличайки повече запитвания и резервации. Посетителите вече имат ясна представа за предлаганите луксозни изживявания, което води до повишена ангажираност и удовлетвореност на клиентите.
+
+  //- Parallax background image
+  section.jarallax(data-jarallax data-speed='0.6')
+    .ratio.ratio-16x9
+    .jarallax-img(style='background-image: url(../../assets/img/portfolio/bulyacht/paralax.png);')
+
+  //- Testimonials (empty)
+  section.container.position-relative.zindex-2.py-5.mt-n1.mt-sm-0.mb-1.my-md-3.my-lg-3.my-xl-4.my-xxl-5
+
+  //- Next projects
+  section.container.pb-5.mb-2.mb-lg-3.mb-xl-4.mb-xxl-5
+    h2.h1.pb-3.pb-lg-4 Следващ проект
+    .row.row-cols-1.row-cols-sm-2.align-items-end.mb-2.pb-md-4
+      .col
+        .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 550px;')
+          .zoom-effect-wrapper
+            .zoom-effect-img: img(src='../../assets/img/portfolio/partdepot/grid.png' alt='Image')
+          .pt-4.mt-lg-2
+            h2.h4.mb-2: a.stretched-link(href='partdepot.html') PArt Depot
+            .d-flex.justify-content-between.fs-lg.text-muted
+              span Уебсайт, Интеграция на График
+              span 2023
+
+block extraScripts
+  script(src='../../assets/vendor/aos/dist/aos.js')
+  script(src='../../assets/vendor/jarallax/dist/jarallax.min.js')
+  script(src='../../assets/vendor/swiper/swiper-bundle.min.js')

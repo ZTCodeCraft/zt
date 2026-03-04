@@ -1,0 +1,121 @@
+extends ../../layouts/_layout-bg.pug
+
+block vars
+  - var title = 'ZT Code Craft | Magenta Zine'
+  - var assetPath = '../../'
+  - var altLangUrl = '/en/portfolio/magenta-zine.html'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/aos/dist/aos.css')
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.position-relative.mb-5
+    .bg-secondary.position-absolute.top-0.end-0.w-50.h-100.d-none.d-lg-block
+    .bg-secondary.position-absolute.top-0.end-0.w-100.h-100.d-lg-none
+    .container.position-relative.zindex-2.py-5.pb-lg-0
+      nav(aria-label='breadcrumb')
+        ol.pt-lg-2.pb-1.breadcrumb
+          li.breadcrumb-item: a(href='/bg/index.html') Начало
+          li.breadcrumb-item: a(href='/bg/portfolio.html') Проекти
+          li.breadcrumb-item.active(aria-current='page') Magenta Zine
+      .d-lg-flex.align-items-center.pt-3.pb-xxl-5
+        img.d-block.order-lg-2.me-auto.me-lg-0.ms-auto(src='../../assets/img/portfolio/magenta/list.png' width='480' alt='Image')
+        .order-lg-1.text-center.text-lg-start.pe-lg-4.py-4.py-md-5
+          h1.display-2.text-uppercase.pb-3.pb-lg-4 Дигитална Трансформация за Писатели
+          p.fs-lg.mx-auto.mx-lg-0.mb-0(style='max-width: 530px;') Създаване на уеб платформа, която подбужда креативността и дава възможност на бизнеса за монетизация.
+      ul.nav.justify-content-center.justify-content-lg-start.mx-n2.pt-lg-5.mb-0
+        li.nav-item.me-3: a.nav-link.p-2(href='https://www.instagram.com/magentazine_com/' target='_blank') Instagram
+
+  //- Content
+  section.container.overflow-hidden.pt-lg-2.pt-xl-4.pt-xxl-5
+    .row.py-sm-3.py-md-4.py-lg-5
+      //- Sticky sidebar
+      .col-md-3.col-lg-2
+        .d-flex.d-md-block.flex-wrap.position-sticky.top-0
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Бизнес
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Magenta Zine
+              li.d-block.py-1 5-10 служители
+              li.d-block.py-1 София, България
+              li.d-block.py-1: a.text-dark(href='https://magenta-zine.com/' target='_blank') Посетете уебсайта
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Сфера на бизнеса
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Дигитални Публиказии и Литература
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Услуги
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Разработка на уеб платформа
+              li.d-block.py-1 Управление на съдържанието
+              li.d-block.py-1 Допълнителни функционалности
+              li.d-block.py-1 Помощ с брандинг
+          .pb-3.mb-2.mb-lg-4
+            h2.fs-base.fw-normal.text-muted.mb-2 Времетраене на проекта
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 2023, 3-4 месеца
+
+      //- Description
+      .col-md-9.offset-lg-1
+        .ps-md-4.ps-lg-0
+          .border-bottom.pb-3.pb-sm-4.pb-lg-5.mb-4
+            p.text-dark.lead.mb-md-2.mb-lg-3.mb-xl-4 Открийте как трансформирахме онлайн пространството на Magenta Zine, давайки възможност на бизнеса да контролира и създава съдържание, както и да си осигурява на приходи за траен успех.
+          h2.h1.pt-2.pt-sm-3.pt-md-4.pt-lg-5.pb-2 За клиента
+          p.fs-lg Нашето сътрудничество доведе до онлайн пространство, което служи както за динамичен журнал, така и като централна платформа за различни творци. Magenta Zine кани както начинаещи, така и опитни писатели да споделят, обсъждат и създават, насърчавайки жизнена общност в съвременния литературен свят.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 Предизвикателството
+          p.fs-lg Magenta Zine се изправи пред предизвикателството да създаде удобна за потребителя мрежа, която не само отпразнува творбите на творческата платформа на жени и небинарни писатели, но също така даде възможност на собствениците на бизнеса безпроблемно да създават и редактират съдържанието с помощта на Markdown файлове. Освен това за да отразява дигиталното пространство тяхната мисия, се изисква внимателно интегриране на брандинг елементи, и цветови гами, вдъхновени от магента и розовата палитра. Балансирайки естетическата привлекателност с практичната функционалност, Magenta Zine раздели разнообразното си съдържание на отделни секции, като същевременно включва функции като споделяне в социални медии, абонаменти за бюлетин и интегрирация за дарения.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 Решението
+          p.fs-lg.mb-0 В отговор на предизвикателството на Magenta Zine, ние създадохме уеб платформа, която безпроблемно съчетава визуална естетика с функционалността. Предоставихме ръководства на клиента и обучение, за да осигурим плавен преход за собствениците на компанията, управляващи съдържанието чрез Markdown файлове. Съобразявайки се с тяхната мисия, ние подбрахме бранд цветове, центрирани около цвета магента, допълнен от хармонична розова палитра. Нашето сътрудничество включи оформлението на платформата с две ревизии, типовете публикации - истории, поезия и статии. Освен това въведохме специален раздел за подбрани публикации, споделяне в социални мрежи с едно кликване, абонаменти за бюлетин и бутон за дарения, стратегически допринасяйки за усилията на Magenta Zine за осигуряване на приходи. Включването на Google Analytics допълнително им дава възможност да проследяват ангажираността на потребителите и да прецизират дигиталната си стратегия.
+
+    //- Results
+    .row.pt-1.pt-sm-3.pt-md-4.pb-5.mb-md-2.mb-lg-3.mb-xl-4.mb-xxl-5
+      .col-md-11.col-lg-9.col-xl-8.pb-1.pb-sm-3.pb-md-4
+        h2.h1.pb-sm-2.pb-lg-3 Резултати
+        p.fs-lg.mb-0 Magenta Zine вече се радва на интуитивното за потребителя пространство, където писателите могат да споделят творбите си. С включването на стратегически функции като <b>споделяне в социални медии, абонаменти за бюлетин и бутон за интегриране на дарения</b>, Magenta Zine успешно инициира усилия за осигуряване на приходи и използва <b>Google Анализ</b> за проследяване и прецизиране на ангажираността на потребителите.
+
+  //- Parallax background image
+  section.jarallax(data-jarallax data-speed='0.6')
+    .ratio.ratio-16x9
+    .jarallax-img(style='background-image: url(../../assets/img/portfolio/magenta/wide-mockup.png);')
+
+  //- Testimonials
+  section.container.position-relative.zindex-2.py-5.mt-n1.mt-sm-0.mb-1.my-md-3.my-lg-3.my-xl-4.my-xxl-5
+    .row.py-md-4.py-lg-5
+      .col-md-9.col-lg-7.order-md-2
+        .swiper(data-swiper-options='{"spaceBetween":40,"loop":true,"bindedContent":true,"autoHeight":true,"pagination":{"el":".testimonials-count","type":"fraction"},"navigation":{"prevEl":"#prev-testimonial","nextEl":"#next-testimonial"}}')
+          div
+            div
+              .d-flex.d-md-none.pt-3.mb-3
+                i.ai-quotes.d-md-none.text-primary.display-3.mt-n2
+                .ps-3
+                  h3.h5.mb-0 Златица Маркова
+                  p.text-muted.mb-0 Собственик на Magenta Zine
+              h2.mb-lg-4 Чудесна и професионална работа!
+              p.lead.mb-0 Екипът разбра точно какво исках от уебсайта си и комуникира ясно с мен през всяка стъпка от процеса. Съобразяваха се с всяка промяна, която исках да направя и винаги бяха насреща, когато имах въпрос. Със сигурност бих им се доверила отново.
+      .col-md-3.offset-lg-1.order-md-1.mt-n3
+        i.ai-quotes.d-none.d-md-block.text-primary.ms-n2.mb-1(style='font-size: 150px;')
+        .binded-content.h-auto.d-none.d-md-block
+          .binded-item.h-auto.active#testimonial-1
+            h3.h5.mb-1 Златица Маркова
+            p.text-muted.mb-0 Собственик на Magenta Zine
+
+  //- Next projects
+  section.container.pb-5.mb-2.mb-lg-3.mb-xl-4.mb-xxl-5
+    h2.h1.pb-3.pb-lg-4 Следващ проект
+    .row.row-cols-1.row-cols-sm-2.align-items-end.mb-2.pb-md-4
+      .col
+        .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 550px;')
+          .zoom-effect-wrapper
+            .zoom-effect-img: img(src='../../assets/img/portfolio/partdepot/grid.png' alt='Image')
+          .pt-4.mt-lg-2
+            h2.h4.mb-2: a.stretched-link(href='partdepot.html') PArt Depot
+            .d-flex.justify-content-between.fs-lg.text-muted
+              span Уебсайт, Интеграция на График
+              span 2023
+
+block extraScripts
+  script(src='../../assets/vendor/aos/dist/aos.js')
+  script(src='../../assets/vendor/jarallax/dist/jarallax.min.js')
+  script(src='../../assets/vendor/swiper/swiper-bundle.min.js')

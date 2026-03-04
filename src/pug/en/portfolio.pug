@@ -1,0 +1,72 @@
+extends ../layouts/_layout-en.pug
+
+block vars
+  - var title = 'ZT Code Craft | Portfolio'
+  - var assetPath = '../'
+  - var altLangUrl = '/bg/portfolio.html'
+
+block content
+  section.container.pb-sm-3.mt-5.mb-2.mb-md-3.mb-lg-4.mb-xxl-5
+    nav(aria-label='breadcrumb')
+      ol.pt-lg-3.pb-lg-4.pb-2.breadcrumb
+        li.breadcrumb-item: a(href='/') Home
+        li.breadcrumb-item.active(aria-current='page') Portfolio
+    h1.pb-3.zt-blue Our Portfolio
+
+    //- BulYacht
+    .row.align-items-center.pt-xl-2.pb-5.mb-lg-2.mb-xl-3.mb-xxl-4
+      .col-md-7.col-lg-6.mb-4.mb-md-0
+        a.d-block.position-relative(href='portfolio/bulyacht.html')
+          .rounded-5.position-absolute.top-0.start-0.w-100.h-100(style='background-color: #d7e4f4' data-aos='zoom-in' data-aos-duration='600' data-aos-offset='250')
+          img.d-block.position-relative.zindex-2.mx-auto(src='../assets/img/portfolio/bulyacht/list.png' width='636' alt='Image' data-aos='fade-in' data-aos-duration='400' data-aos-offset='250')
+      .col-md-5.col-xl-4.offset-lg-1(data-aos='fade-up' data-aos-duration='400' data-aos-offset='170')
+        .ps-md-3.ps-lg-0
+          img.d-block.d-dark-mode-none.mb-2.mb-lg-3(src='../assets/img/portfolio/bulyacht/logo.png' width='150' alt='BulYacht')
+          img.d-none.d-dark-mode-block.mb-2.mb-lg-3(src='../assets/img/portfolio/bulyacht/logo.png' width='150' alt='BulYacht')
+          h2.h4 Website development for luxury yacht
+          p.fs-sm.pb-3.pb-lg-4.mb-3 Discover how we crafted an elegant and user-friendly website for BulYacht, showcasing their luxury yacht trips in Greece with detailed information on destinations, amenities, pricing, and availability to enhance the booking experience.
+          a.btn.btn-sm.btn-outline-dark.rounded-pill(href='portfolio/bulyacht.html') Read the full story
+          .d-flex.align-items-center.pt-2.pt-lg-3.mt-3
+            h6.text-body.mb-0 Custom Features:
+            img.d-block.d-dark-mode-none(src='../assets/img/logos/google-calendar.png' width='160' alt='Google Calendar')
+            img.d-none.d-dark-mode-block(src='../assets/img/logos/google-calendar.png' width='160' alt='Google Calendar')
+
+    //- Magenta Zine
+    .row.align-items-center.pt-xl-2.pb-5.mb-lg-2.mb-xl-3.mb-xxl-4
+      .col-md-7.col-lg-6.mb-4.mb-md-0
+        a.d-block.position-relative(href='portfolio/magenta-zine.html')
+          .rounded-5.position-absolute.top-0.start-0.w-100.h-100(style='background-color: #d7e4f4' data-aos='zoom-in' data-aos-duration='600' data-aos-offset='250')
+          img.d-block.position-relative.zindex-2.mx-auto(src='../assets/img/portfolio/magenta/list.png' width='636' alt='Image' data-aos='fade-in' data-aos-duration='400' data-aos-offset='250')
+      .col-md-5.col-xl-4.offset-lg-1(data-aos='fade-up' data-aos-duration='400' data-aos-offset='170')
+        .ps-md-3.ps-lg-0
+          img.d-block.d-dark-mode-none.mb-2.mb-lg-3(src='../assets/img/logos/magenta-logo.png' width='150' alt='Magenta Zine')
+          img.d-none.d-dark-mode-block.mb-2.mb-lg-3(src='../assets/img/logos/magenta-logo.png' width='150' alt='Magenta Zine')
+          h2.h4 Web platform for a digital magazine
+          p.fs-sm.pb-3.pb-lg-4.mb-3 Discover how we transformed Magenta Zine's online hub, streamlining content creation, empowering writers, and strategically boosting monetization efforts for lasting success.
+          a.btn.btn-sm.btn-outline-dark.rounded-pill(href='portfolio/magenta-zine.html') Read the full story
+          .d-flex.align-items-center.pt-2.pt-lg-3.mt-3
+            h6.text-body.mb-0 Custom Features:
+            img.d-block.d-dark-mode-none(src='../assets/img/logos/jekyll.png' width='160' alt='Jekyll')
+            img.d-none.d-dark-mode-block(src='../assets/img/logos/jekyll-dark.png' width='160' alt='Jekyll')
+            img.d-block.d-dark-mode-none(src='../assets/img/logos/moosend.png' width='160' alt='Moosend')
+            img.d-none.d-dark-mode-block(src='../assets/img/logos/moosend.png' width='160' alt='Moosend')
+
+    //- PartDepot
+    .row.align-items-center.pt-xl-2.pb-5.mb-lg-2.mb-xl-3.mb-xxl-4
+      .col-md-7.col-lg-6.mb-4.mb-md-0
+        a.d-block.position-relative(href='portfolio/partdepot.html')
+          .bg-danger.rounded-5.position-absolute.top-0.start-0.w-100.h-100(data-aos='zoom-in' data-aos-duration='1200' data-aos-offset='250')
+          img.d-block.position-relative.zindex-2.mx-auto(src='../assets/img/portfolio/partdepot/list.png' width='636' alt='Image' data-aos='fade-in' data-aos-duration='400' data-aos-offset='250')
+      .col-md-5.col-xl-4.offset-lg-1(data-aos='fade-up' data-aos-duration='400' data-aos-offset='170')
+        .ps-md-3.ps-lg-0
+          img.d-block.mb-2.mb-lg-3(src='../assets/img/logos/part-depot-logo.png' width='90' alt='PartDepot')
+          h2.h4 Website development for an art studio
+          p.fs-sm.pb-3.pb-lg-4.mb-3 Discover the journey of redefining PartDepot's online presence, where thoughtful design meets practical functionality, offering a glimpse into the seamless integration of their brand and dynamic schedule updates.
+          a.btn.btn-sm.btn-outline-dark.rounded-pill(href='portfolio/partdepot.html') Read the full story
+          .d-flex.align-items-center.pt-2.pt-lg-3.mt-3
+            h6.text-body.mb-0.me-3 Custom Integration:
+            img.d-block.d-dark-mode-none.me-4(src='../assets/img/logos/contentful.png' width='140' alt='Contentful')
+            img.d-none.d-dark-mode-block.me-4(src='../assets/img/logos/contentful-dark.png' width='140' alt='Contentful')
+
+block extraScripts
+  script(src='../assets/vendor/aos/dist/aos.js')

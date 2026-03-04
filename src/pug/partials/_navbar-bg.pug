@@ -1,0 +1,33 @@
+//-
+  Variables expected:
+    assetPath  - relative path to assets root (e.g. '../')
+    altLangUrl - URL of the corresponding EN page (defaults to '/')
+-
+  var _altLangUrl = altLangUrl || '/'
+
+header.navbar.navbar-expand-lg.bg-nav
+  .container
+    a.navbar-brand(href='/bg/index.html')
+      span.text-primary.flex-shrink-0.me-2
+        img(src=`${assetPath}assets/img/logo.png` width='150' height='50')
+    .form-check.form-switch.mode-switch.order-lg-2.me-3.me-lg-4.ms-auto(data-bs-toggle='mode')
+      input.form-check-input(type='checkbox' id='theme-mode')
+      label.form-check-label(for='theme-mode')
+        i.ai-sun.fs-lg
+      label.form-check-label(for='theme-mode')
+        i.ai-moon.fs-lg
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse2' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    ul.navbar-nav.order-lg-3.d-none.d-lg-inline-flex
+      li.nav-item
+        a.nav-link(href='#') BG
+      li.nav-item.separator.line-lang.d-sm-inline  |
+      li.nav-item
+        a.nav-link(href=_altLangUrl) EN
+    nav.collapse.navbar-collapse#navbarCollapse2
+      ul.navbar-nav
+        li.nav-item: a.nav-link(href='/bg/services.html') Услуги
+        li.nav-item: a.nav-link(href='/bg/portfolio.html') Проекти
+        li.nav-item: a.nav-link(href='/bg/contacts.html') Контакти
+        li.nav-item.fs-sm.d-lg-none.mb-lg-0: a.nav-link(href='#') BG
+        li.nav-item.fs-sm.d-lg-none.mb-lg-0: a.nav-link(href=_altLangUrl) EN

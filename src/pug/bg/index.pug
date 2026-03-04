@@ -1,0 +1,234 @@
+extends ../layouts/_layout-bg.pug
+
+block vars
+  - var title = 'ZT Code Craft'
+  - var assetPath = '../'
+  - var altLangUrl = '/'
+  - var swiperToolsOpts1 = '{"loop":true,"grabCursor":false,"centeredSlides":true,"autoplay":{"delay":0,"disableOnInteraction":false},"freeMode":true,"speed":10000,"freeModeMomentum":false,"breakpoints":{"0":{"slidesPerView":2},"600":{"slidesPerView":3},"800":{"slidesPerView":4},"1200":{"slidesPerView":5},"1400":{"slidesPerView":6},"1600":{"slidesPerView":7}}}'
+  - var swiperToolsOpts2 = '{"loop":true,"grabCursor":false,"centeredSlides":true,"autoplay":{"delay":0,"disableOnInteraction":false},"freeMode":true,"speed":8500,"freeModeMomentum":false,"breakpoints":{"0":{"slidesPerView":2},"600":{"slidesPerView":3},"800":{"slidesPerView":4},"1200":{"slidesPerView":5},"1400":{"slidesPerView":6},"1600":{"slidesPerView":7}}}'
+  - var swiperTestimonialsOpts = '{"spaceBetween":40,"loop":true,"bindedContent":true,"autoHeight":true,"pagination":{"el":".testimonials-count","type":"fraction"},"navigation":{"prevEl":"#prev-testimonial","nextEl":"#next-testimonial"}}'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.container.py-md-4.py-lg-5.mb-xl-3.mb-xxl-5
+    .row.pb-5
+      //- Hero Image
+      .col-sm-10.col-md-6.col-lg-6.order-md-1
+        .container-fluid.overflow-hidden.pt-sm-4.pb-sm-2.pb-md-3
+          .parallax.mx-auto(style='max-width: 1440px')
+            .parallax-layer(data-depth='0.1')
+              img.d-dark-mode-none(src='../assets/img/hero/2.png' alt='Layer')
+              img.d-none.d-dark-mode-block(src='../assets/img/hero/2.png' alt='Layer')
+            .parallax-layer.zindex-2(data-depth='0.25')
+              img.d-dark-mode-none(src='../assets/img/hero/3.png' alt='Layer')
+              img.d-none.d-dark-mode-block(src='../assets/img/hero/3.png' alt='Layer')
+            .parallax-layer.zindex-1(data-depth='0.35')
+              img.d-dark-mode-none(src='../assets/img/hero/4.png' alt='Layer')
+              img.d-none.d-dark-mode-block(src='../assets/img/hero/4.png' alt='Layer')
+      //- Text + CTA button
+      .col-10.col-sm-8.col-md-6.col-xl-5.pt-3.order-md-2.pb-3.pb-md-0.mb-3.mb-sm-4.mb-md-0.mt-4.pd-left-4
+        h1.display-1.text-uppercase.fw-bold.mt-auto.mb-2.mt-4.zt-blue.hero-font
+          | уебсайт изработка
+          span.fw-normal.zt-pink  и бранд
+        span.d-none.d-md-inline-block.align-middle.ms-4.zt-blue(style='width: 120px; height: 2px; background-color: currentColor')
+        .d-flex.align-items-center.py-4.py-lg-5
+          a.btn.btn-lg.btn-primary.rounded-0.me-2.me-sm-3(href='/bg/contacts.html') Нека работим заедно
+        ul.nav.mt-auto.mx-n2.pt-sm-3.pt-lg-0
+          li.nav-item.me-3: a.nav-link.p-2(target='_blank' href='https://www.instagram.com/ztcodecraft/') Instagram
+          li.nav-item.me-3: a.nav-link.p-2(target='_blank' href='https://www.linkedin.com/company/zt-code-craft') Linkedin
+          li.nav-item: a.nav-link.p-2(target='_blank' href='https://www.facebook.com/ztcodecraft') Facebook
+
+  //- Services
+  section.container.py-md-4.py-lg-5.mb-xl-3.mb-xxl-5
+    .col-xxl-3.col-lg-4.text-center.text-lg-start
+      h1 Нашите Услуги
+    .row.pb-5
+      .row.g-2
+        .col
+          a.card-flip(href='/bg/services.html#quick-website')
+            .card-flip-inner
+              .card-flip-front(style='background-image: url(../assets/img/services/web.png)')
+                .d-flex.flex-column.h-100.ignore-dark-mode
+                  h2.fs-lg.fw-normal.mb-0.mt-auto.zt-white Уебсайт За 2 Седмици
+              .card-flip-back.bg-secondary
+                .d-flex.flex-column.h-100.px-sm-2.pt-sm-2.px-lg-0.pt-lg-0.px-xl-3.pt-xl-3
+                  h3.h4 Уебсайт За 2 Седмици
+                  ul.text-body.ps-4.mb-3
+                    li.mb-2 Бърза изработка
+                    li.mb-2 Важни остовни страници - Начало, За нас, Контакти, Меню/График
+                    li.mb-2 Фиксирана цена, без допълнителни плащания
+                  .text-end.pt-3.pt-sm-2.pt-xl-4.mt-auto.me-sm-n2.me-lg-0.me-xl-n3
+                    .btn.btn-sm.btn-icon.btn-outline-primary.rounded-circle: i.ai-arrow-right
+        .col
+          a.card-flip(href='/bg/services.html#custom-website')
+            .card-flip-inner
+              .card-flip-front(style='background-image: url(../assets/img/services/integrations.png)')
+                .d-flex.flex-column.h-100.ignore-dark-mode
+                  h2.fs-lg.fw-normal.mb-0.mt-auto.zt-white Персонализиран Уебсайт
+              .card-flip-back.bg-secondary
+                .d-flex.flex-column.h-100.px-sm-2.pt-sm-2.px-lg-0.pt-lg-0.px-xl-3.pt-xl-3
+                  h3.h4 Персонализиран Уебсайт
+                  ul.text-body.ps-4.mb-3
+                    li.mb-2 Интеграции с плащания
+                    li.mb-2 Имейл комуникации
+                    li.mb-2 Управление на съдържанието
+                    li.mb-2 Други динамични функционалности
+                  .text-end.pt-3.pt-sm-2.pt-xl-4.mt-auto.me-sm-n2.me-lg-0.me-xl-n3
+                    .btn.btn-sm.btn-icon.btn-outline-primary.rounded-circle: i.ai-arrow-right
+        .col.order-sm-2
+          a.card-flip(href='/bg/services.html#branding')
+            .card-flip-inner
+              .card-flip-front(style='background-image: url(../assets/img/services/brand.png)')
+                .d-flex.flex-column.h-100.ignore-dark-mode
+                  h2.fs-lg.fw-normal.mb-0.mt-auto.zt-white Брандинг
+              .card-flip-back.bg-secondary
+                .d-flex.flex-column.h-100.px-sm-2.pt-sm-2.px-lg-0.pt-lg-0.px-xl-3.pt-xl-3
+                  h3.h4 Брандинг и Визуализации
+                  ul.text-body.ps-4.mb-3
+                    li.mb-2 Бранд идентичност
+                    li.mb-2 Персонализирани визуализации
+                    li.mb-2 Лого дизайн
+                    li.mb-2 Избор на цветова палитра и шрифт
+                  .text-end.pt-3.pt-sm-2.pt-xl-4.mt-auto.me-sm-n2.me-lg-0.me-xl-n3
+                    .btn.btn-sm.btn-icon.btn-outline-primary.rounded-circle: i.ai-arrow-right
+
+  //- About
+  section.container.py-md-4.py-lg-5.mb-xl-3.mb-xxl-5
+    .row.pt-sm-2
+      .col-xl-10
+        p.fs-2.text-dark.pb-md-2.mb-lg-5
+          | От началните етапи на изграждането на идея, ние обръщаме специално внимание на
+          span.fw-semibold  разработването на иновативни решения за текущи предизвикателства,
+          |  формирането на брандове, които устояват на влиянието на времето, и развиването на дигитални умения, които успешно съчетават
+          span.fw-semibold  креативността с човешката връзка.
+
+  //- Our Projects
+  section.container.overflow-hidden.pb-5.mb-2.mb-lg-3.mb-xl-4.mb-xxl-5.pt-4
+    .masonry-filterable
+      .row.pb-lg-4.mb-2.mb-sm-3
+        .col-xxl-3.col-lg-4.text-center.text-lg-start
+          h1 Наши Проекти
+          p.mb-4.mb-lg-0 Ние ще използваме нашата експертиза и креативност, за да разработим вашия проект.
+        .col-xxl-9.col-lg-8.d-flex
+          ul.masonry-filters.nav.nav-pills.fs-sm.flex-nowrap.overflow-auto.text-nowrap.w-100.mx-auto.me-lg-0.pb-3(style='max-width: 456px')
+            li.nav-item.mb-0: a.nav-link.border.active(href='#' data-group='all') Всички
+            li.nav-item.mb-0: a.nav-link.border(href='#' data-group='web') Уебсайт
+            li.nav-item.mb-0: a.nav-link.border(href='#' data-group='branding') Брандинг
+      .masonry-grid(data-columns='2')
+        article.masonry-grid-item.pb-5.mb-md-2.mb-lg-4.mb-xl-5(data-groups='["web"]')
+          .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 512px')
+            .zoom-effect-wrapper
+              .zoom-effect-img: img(src='../assets/img/portfolio/partdepot/grid.png')
+            .pt-4.mt-lg-2
+              h2.h4.mb-2: a.stretched-link(href='/bg/portfolio/partdepot.html') PArt Depot
+              .d-flex.justify-content-between.fs-lg.text-muted
+                span Уебсайт, Интеграция на График
+                span 2023
+        article.masonry-grid-item.pb-5.mb-md-2.mb-lg-4.mb-xl-5(data-groups='["branding","web"]')
+          .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 704px')
+            .zoom-effect-wrapper
+              .zoom-effect-img: img(src='../assets/img/portfolio/magenta/grid.png')
+            .pt-4.mt-lg-2
+              h2.h4.mb-2: a.stretched-link(href='/bg/portfolio/magenta-zine.html') Magenta Zine
+              .d-flex.justify-content-between.fs-lg.text-muted
+                span Уебсайт, Блог, Брандинг
+                span 2023
+        article.masonry-grid-item.pb-5.mb-md-2.mb-lg-4.mb-xl-5(data-groups='["branding","web"]')
+          .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 704px')
+            .zoom-effect-wrapper
+              .zoom-effect-img: img(src='../assets/img/portfolio/bulyacht/list.png')
+            .pt-4.mt-lg-2
+              h2.h4.mb-2: a.stretched-link(href='/bg/portfolio/bulyacht.html') BulYacht
+              .d-flex.justify-content-between.fs-lg.text-muted
+                span Уебсайт, Интеграция на Гугъл Календар
+                span 2024
+      .text-center.pb-sm-2.pb-md-4.mt-n1.mt-lg-n2
+        a.btn.btn-lg.btn-outline-dark.rounded-0(href='/bg/contacts.html') Нека работим заедно
+
+  //- Tools (Logos autoplay slider)
+  section.pt-sm-1.pt-lg-3.pt-xl-4
+    .container.text-center
+      h2.h1 Технологии, с които работим
+      p.pb-1.pb-sm-2.pb-md-3.pb-lg-4.mb-3 Модерни технологии, на които можете да се доверите.
+    .swiper.pb-3.pb-sm-4.mb-xl-2(data-swiper-options=swiperToolsOpts1)
+      .swiper-wrapper(style='transition-timing-function: linear !important')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/emailjs.png' width='196' alt='EmailJS')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/emailjs-dark.png' width='196' alt='EmailJS')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/shopify.png' width='196' alt='Shopify')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/shopify-dark.png' width='196' alt='Shopify')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/stripe.png' width='196' alt='Stripe')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/bootstrap.png' width='196' alt='Bootstrap')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/contentful.png' width='196' alt='Contentful')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/contentful-dark.png' width='196' alt='Contentful')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/moosend.png' width='196' alt='Moosend')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/gfonts.png' width='196' alt='Google Fonts')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/gfonts-dark.png' width='196' alt='Google Fonts')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/calendly.png' width='196' alt='Calendly')
+    .swiper(dir='rtl' data-swiper-options=swiperToolsOpts2)
+      .swiper-wrapper(style='transition-timing-function: linear !important')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/js.png' width='196' alt='JS')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/js-dark.png' width='196' alt='JS')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/html.png' width='196' alt='HTML/CSS')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/sass.png' width='196' alt='SASS')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/jekyll.png' width='196' alt='jekyll')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/jekyll-dark.png' width='196' alt='jekyll')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/gfonts.png' width='196' alt='Google Fonts')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/gfonts-dark.png' width='196' alt='Google Fonts')
+        .swiper-slide
+          img.d-block.d-dark-mode-none.mx-auto(src='../assets/img/logos/mailchimp.png' width='196' alt='Mailchimp')
+          img.d-none.d-dark-mode-block.mx-auto(src='../assets/img/logos/mailchimp-dark.png' width='196' alt='Mailchimp')
+        .swiper-slide: img.d-block.mx-auto(src='../assets/img/logos/canva.png' width='196' alt='Canva')
+
+  //- Testimonials
+  section.container.position-relative.zindex-2.py-5.mt-n3.mt-sm-0.mb-md-3.my-lg-3.my-xl-4.my-xxl-5
+    .row.py-md-4.py-lg-5
+      .col-md-9.col-lg-7.order-md-2
+        .swiper(data-swiper-options=swiperTestimonialsOpts)
+          .swiper-wrapper
+            .swiper-slide(data-swiper-binded='#testimonial-1')
+              .d-flex.d-md-none.pt-3.mb-3
+                i.ai-quotes.d-md-none.text-primary.display-3.mt-n2
+                .ps-3
+                  h3.h5.mb-1 Памела Трифонова
+                  p.text-muted.mb-0 Собственик на Part Depot
+              h2.mb-lg-4 Чудесна работа и отношение!
+              p.lead.mb-0 Работа по сайта беше изцяло съобразена с времето с което разполагах, дистанционните онлайн срещи бяха ключови за оформяне на визията и концепцията. Процеса беше изключително лек и приятен, имайки впредвид информационната ми неграмотност на моменти, екипът беше изключително търпелив и подробно ме водеха през отделните етапи във оформянето и развитието на сайта. Съдействаха ми както във визуалните елементи и дизайна, така и в избора на подходящ домейн. Определено бих ги препоръчала на свои познати стартиращи своите бизнеси.
+            .swiper-slide(data-swiper-binded='#testimonial-2')
+              .d-flex.d-md-none.pt-3.mb-3
+                i.ai-quotes.d-md-none.text-primary.display-3.mt-n2
+                .ps-3
+                  h3.h5.mb-1 Златица Маркова
+                  p.text-muted.mb-0 Собственик на Magenta Zine
+              h2.mb-lg-4 Чудесна и професионална работа!
+              p.lead.mb-0 Екипът разбра точно какво исках от уебсайта си и комуникира ясно с мен през всяка стъпка от процеса. Съобразяваха се с всяка промяна, която исках да направя и винаги бяха насреща, когато имах въпрос. Със сигурност бих им се доверила отново.
+      .col-md-3.offset-lg-1.order-md-1.mt-n3
+        i.ai-quotes.d-none.d-md-block.text-primary.ms-n2.mb-1(style='font-size: 150px')
+        .binded-content.h-auto.d-none.d-md-block
+          .binded-item.h-auto.active#testimonial-1
+            h3.h5.mb-1 Памела Трифонова
+            p.text-muted.mb-0 Собственик на Part Depot
+          .binded-item.h-auto#testimonial-2
+            h3.h5.mb-1 Златица Маркова
+            p.text-muted.mb-0 Собственик на Magenta Zine
+        .d-flex.align-items-center.pb-2.pb-md-0.pt-4.mt-3
+          button.btn.btn-icon.btn-sm.btn-outline-primary.rounded-circle.me-3(type='button' id='prev-testimonial')
+            i.ai-arrow-left
+          .testimonials-count.fw-medium.flex-shrink-0.text-center(style='width: 2.5rem')
+          button.btn.btn-icon.btn-sm.btn-outline-primary.rounded-circle.ms-3(type='button' id='next-testimonial')
+            i.ai-arrow-right
+
+block extraScripts
+  script(src='../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')
+  script(src='../assets/vendor/shufflejs/dist/shuffle.min.js')
+  script(src='../assets/vendor/swiper/swiper-bundle.min.js')
+  script(src='../assets/vendor/parallax-js/dist/parallax.min.js')

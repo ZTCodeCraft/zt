@@ -229,6 +229,12 @@ ul {
   padding-left: 4rem !important;
 }
 
+@media (max-width: 767.98px) {
+  .pd-left-4 {
+    padding-left: 1.5rem !important;
+  }
+}
+
 ol,
 ul,
 dl {
@@ -17974,4 +17980,21 @@ img-comparison-slider:focus {
 }
 .dark-mode .fc-list-day-cushion {
   background-color: #121519;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer,
+  [data-aos] {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .swiper-wrapper {
+    transition-duration: 0ms !important;
+  }
+  .page-loading {
+    transition: none !important;
+  }
 }

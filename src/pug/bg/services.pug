@@ -1,0 +1,206 @@
+extends ../layouts/_layout-bg.pug
+
+block vars
+  - var title = 'ZT Code Craft | Услуги'
+  - var assetPath = '../'
+  - var altLangUrl = '/en/services.html'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.bg-secondary.py-5
+    .container.pb-lg-2.pb-xl-4.py-xxl-5
+      nav(aria-label='breadcrumb')
+        ol.pt-lg-3.pb-lg-4.pb-2.breadcrumb
+          li.breadcrumb-item: a(href='/bg/index.html') Начало
+          li.breadcrumb-item.active(aria-current='page') Услуги
+      h1.display-2.mb-4.text-center.zt-blue Нашите услуги
+      p.text-center.pb-4.mb-2.mb-lg-3.fw-500.subheading-font
+        | ZT Code Craft е креативно студио, специализиращо в
+        br
+        b.zt-pink уебсайт разработване и брандинг,
+        br
+        | целящо да подпомага развиването на вашия бизнес.
+
+  //- Services
+  .container.py-4
+    //- Website in 2 Weeks
+    section.row.align-items-center.pb-5.py-xl-5.my-2#quick-website
+      .col-md-6.offset-xl-1.order-md-2.pb-2.mb-4.mb-md-0
+        img.rounded-5(src='../assets/img/services/web-2.png' alt='Image')
+      .col-md-6.col-xl-5.order-md-1
+        .pe-md-4.pe-xl-0.pb-4
+          h2.h1.pb-2.pb-lg-3.zt-blue Уебсайт За 2 Седмици
+          dl.pb-2
+            dt Бърза Изработка
+            dd Изградете бизнеса си онлайн бързо с напълно функционален уебсайт само за две седмици.
+            dt Включени Основните Страници
+            dd
+              | Получавате
+              b.zt-pink  до 5 страници
+              | , включващи опции като Начална страница, За нас, Контакти, Меню/График и карта.
+              |  Имате възможността да изберете какви страници биха най-подходящи за вашияте бизнес нужди.
+              |  Те ще бъдат модифицирани по
+              b.zt-pink  нашите подбрани шаблони
+              | , за да иглеждат професионално и модерно.
+            dt Без допълнителни разходи, без месечни такси
+            dd
+              | Всичко, от което се нуждаете за вашия уебсайт,
+              |  включително хостинг (място, където вашият уебсайт се намира в интернет) и сигурност (SSL), се покрива с едно плащане.
+              |  Освен това няма допълнителни месечни такси.
+          .row.row-cols-2.mb-4
+            a.btn.btn-primary(href='/bg/contacts.html') Нека работим заедно
+
+    //- Custom Website / Dynamic Features
+    section.row.align-items-center.pb-5.py-xl-5.my-2#custom-website
+      .col-md-6.pb-2.mb-4.mb-md-0
+        img.rounded-5(src='../assets/img/services/integrations-2.png' alt='Image')
+      .col-md-6.col-xl-5.offset-xl-1
+        .ps-md-4.pe-xl-0
+          h2.h1.pb-2.pb-lg-3.zt-pink Възможност за Динамични Функционалности
+          dl.pb-2
+            dt Интегрирайте допълнителни функционалности съобразени с вашите конкретни изисквания и бизнес цели.
+            dd
+              ul
+                li системи за резервация
+                li имейл интеграции, бюлетини
+                li инструменти за анализ - Google Analytics
+            dt Персонализиран Административен Панел
+            dd Пълен контрол върху съдържанието, снимките и други елементи — директно от браузъра, без нужда от технически познания.
+          a.btn.btn-primary(href='/bg/contacts.html') Нека работим заедно
+
+    //- How it works
+    section.bg-secondary.pt-2.mt-md-3.mt-lg-2.mt-xl-4.mt-xxl-3.pb-5
+      .container.pt-2.pt-sm-4.pt-lg-5
+        h2.h1.text-center.pb-3.mb-3.mb-lg-4 Как работи процесът?
+
+        //- Step 01
+        .row.align-items-center.position-relative.pb-5.pb-lg-0.mb-1.mb-sm-2.mb-md-4.mb-lg-0
+          .col-md-6.col-xl-5.offset-lg-1.order-md-2.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-xl-1.order-md-1(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .pe-md-4.pe-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Стъпка 01
+              h3.h2.mb-3.mb-lg-4 Провеждаме Консултация, Дефинираме Целите
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5
+                | Започнете, като насрочите разговор с нас. Ще се потопим във вашите бизнес нужди,
+                |  обсъдим кои услуги отговарят на вашите цели и конкретни изисквания, за да осъществим вашата визия.
+                |  В тази стъпка от процеса ще обсъдим времеви рамки, изисквания и ценообразуване.
+              a.btn.btn-outline-primary.rounded-pill(href='/bg/contacts.html') Насрочване на консултация
+
+        //- Arrow 1
+        .d-none.d-lg-flex.justify-content-center(data-aos='fade-in' data-aos-duration='500' data-aos-offset='250')
+          svg.d-block.text-primary(width='339' height='365' viewBox='0 0 339 365' fill='none' xmlns='http://www.w3.org/2000/svg' style='margin-left: -150px; margin-top: -140px; margin-bottom: -108px')
+            path(d='M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606' stroke='url(#arrow1)' stroke-width='2' stroke-linecap='round' stroke-dasharray='6 6')
+            path(d='M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z' fill='currentColor')
+            defs
+              linearGradient#arrow1(x1='324' y1='291.5' x2='-2.99974' y2='72.4997' gradientUnits='userSpaceOnUse')
+                stop(offset='0' stop-color='currentColor')
+                stop(offset='1' stop-color='currentColor' stop-opacity='0')
+
+        //- Step 02
+        .row.align-items-center.position-relative.pb-5.pb-lg-0.mb-1.mb-sm-2.mb-md-4.mb-lg-0
+          .col-md-6.col-xl-5.offset-xl-1.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-lg-1(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .ps-md-4.ps-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Стъпка 02
+              h3.h2.mb-3.mb-lg-4 Фаза на Разработване - Вашата Визия и Начин
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5
+                | Във фазата на разработка, независимо дали става въпрос за изграждане на уебсайт или дефиниране на вашия бранд, контролът е във вашите ръце.
+                |  Можете да сте включени в процеса, както предпочитате, или да поверите всичко на нас – знаем, че вашето време е ценно.
+                |  Нашата цел е сътрудничество, което да гарантира, че проектът ви отразява вашата уникална идентичност.
+
+        //- Arrow 2
+        .d-none.d-lg-flex.justify-content-center(data-aos='fade-in' data-aos-duration='500' data-aos-offset='250')
+          svg.d-block.text-primary(width='263' height='275' viewBox='0 0 263 275' fill='none' xmlns='http://www.w3.org/2000/svg' style='margin-top: -60px; margin-left: -120px; margin-bottom: -80px')
+            path(d='M8.13678 249.647C7.47108 250.081 6.59001 249.602 6.59106 248.808L6.60444 238.689C6.60544 237.931 7.4158 237.45 8.08162 237.811L16.5478 242.408C17.2136 242.77 17.2512 243.712 16.6163 244.125L8.13678 249.647Z' fill='currentColor')
+            path(d='M261.961 37.8891C216.908 65.6243 128.226 135.486 133.916 193.05C141.029 265.005 265.134 173.468 173.666 148.634C89.2542 125.715 30.9125 210.547 13.9796 236.702' stroke='url(#arrow2)' stroke-width='2' stroke-linecap='round' stroke-dasharray='6 6')
+            defs
+              linearGradient#arrow2(x1='13.9797' y1='234.5' x2='276.704' y2='60.1939' gradientUnits='userSpaceOnUse')
+                stop(offset='0' stop-color='currentColor')
+                stop(offset='1' stop-color='currentColor' stop-opacity='0')
+
+        //- Step 03
+        .row.align-items-center.position-relative
+          .col-md-6.col-xl-5.offset-lg-1.order-md-2.d-md-flex.justify-content-end.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-xl-1.order-md-1(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .pe-md-4.pe-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Стъпка 03
+              h3.h2.mb-3.mb-lg-4 Вашият Проект и Успех
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5
+                | Последната стъпка е предаването на проекта. Вашият напълно разработен уебсайт или утвърден бранд е вече готова за своя дебют.
+                |  Оборудвани сте с инструментите за дигитален успех.
+
+    //- FAQ
+    section.py-5
+      .container.py-lg-3.py-xl-5
+        .row.pt-1.pb-2.py-sm-4
+          .col-md-4.text-center.text-md-start
+            h2.h1.zt-blue Имате въпроси?
+            p.pb-3.pb-sm-4.zt-pink Не намерихте това, което търсите тук? Свържете се с нас.
+            .d-none.d-md-flex.justify-content-center
+              svg.zt-pink.ms-n4(width='200' height='211' viewBox='0 0 200 211' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z' fill='currentColor')
+          .col-md-8.col-lg-7.offset-lg-1
+            #faq.accordion
+              .accordion-item.bg-light
+                h3.accordion-header#headingOne
+                  button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#questionOne' aria-expanded='true' aria-controls='questionOne') Колко струва изработка на уебсайт?
+                #questionOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | За статичен уебсайт цената е €300.
+                    |  Допълнителни функции, като персонализирани интеграции или динамични функционалности (напр. резервации, плащания, персонализирани формуляри), обаче може да наложат допълнителни такси въз основа на вашите специфични изисквания.
+              .accordion-item.bg-light
+                h3.accordion-header#headingTwo
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionTwo' aria-expanded='false' aria-controls='questionTwo') Има ли допълнителни разходи?
+                #questionTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | При статичните уебсайти
+                    b  няма месечни такси
+                    |  — за разлика от платформи като WordPress или Wix, които изискват периодични абонаменти.
+                    |  Работим на принципа на еднократно плащане и включваме безплатен хостинг и SSL сертификат без допълнителни разходи.
+                    br
+                    br
+                    | Единственият постоянен разход е домейна.
+                    br
+                    br
+                    | За по-сложни уебсайтове — като тези, изискващи административен панел, платформа за резервации или друга разширена функционалност — се прилага фиксирана допълнителна такса.
+                    |  Всякакви бъдещи промени или допълнителна работа, поискана след предаването на проекта, също ще бъдат таксувани отделно.
+              .accordion-item.bg-light
+                h3.accordion-header#headingThreeA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionThree' aria-expanded='false' aria-controls='questionThree') Колко време отнема изработването на уебсайт?
+                #questionThree.accordion-collapse.collapse(aria-labelledby='headingThreeA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | Времето варира в зависимост от сложността на проекта.
+                    b  За стартовата ни услуга - Уебсайт за Две Седмици, разработката отнема 2 седмици.
+                    |  Ще ви предоставим приблизителна времева рамка по време на нашата първоначална консултация.
+              .accordion-item.bg-light
+                h3.accordion-header#headingThreeB
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionFour' aria-expanded='false' aria-controls='questionFour') Мога ли да актуализирам съдържанието на уебсайта си, след като е активен?
+                #questionFour.accordion-collapse.collapse(aria-labelledby='headingThreeB' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | Абсолютно!
+                    b  Имате възможността да направите еднократно плащане за конкретни промени на уебсайта или да изберете месечен абонамент за постоянни актуализации.
+                    br
+                    | Като алтернатива
+                    b  можем да разработим персонализиран административен панел
+                    |  за вашия уебсайт, който ви дава пълен контрол върху съдържанието, снимките и други елементи — директно от браузъра, без нужда от технически познания.
+              .accordion-item.bg-light
+                h3.accordion-header#headingFourA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionFive' aria-expanded='false' aria-controls='questionFive') Какво се случва, ако има технически проблеми с уебсайта ми?
+                #questionFive.accordion-collapse.collapse(aria-labelledby='headingFourA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | В малко вероятния случай уебсайтът ви да срещне технически проблеми, бъдете сигурни, че ще ви покрием.
+                    |  Свържете се с нас и
+                    b  ние незабавно ще разгледаме и разрешим всякакви технически проблеми безплатно
+                    | . В ZT Code Craft вашият уебсайт е в добри ръце и ние гарантираме качеството на нашата услуга.
+              .accordion-item.bg-light
+                h3.accordion-header#headingFiveA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionSix' aria-expanded='false' aria-controls='questionSix') Можете ли да помогнете със създаването на съдържание и илюстрации за уебсайта?
+                #questionSix.accordion-collapse.collapse(aria-labelledby='headingFiveA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm Разбира се! Като част от нашата цялостна услуга за брандинг, ние предлагаме помощ при създаване на съдържание и илюстрации, за да гарантираме, че вашият уебсайт не само изглежда фантастично, но и разказва визуално завладяваща история. Позволете ни да вдъхнем живот на вашия бранд със завладяващо съдържание и привличащи погледа визуализации.
+
+block extraScripts
+  script(src='../assets/vendor/jarallax/dist/jarallax.min.js')
+  script(src='../assets/vendor/swiper/swiper-bundle.min.js')

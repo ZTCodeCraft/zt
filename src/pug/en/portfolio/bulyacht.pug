@@ -1,0 +1,99 @@
+extends ../../layouts/_layout-en.pug
+
+block vars
+  - var title = 'ZT Code Craft | BulYacht'
+  - var assetPath = '../../'
+  - var altLangUrl = '/bg/portfolio/bulyacht.html'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/aos/dist/aos.css')
+  link(rel='stylesheet' media='screen' href='../../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.position-relative.mb-5
+    .bg-secondary.position-absolute.top-0.end-0.w-50.h-100.d-none.d-lg-block
+    .bg-secondary.position-absolute.top-0.end-0.w-100.h-100.d-lg-none
+    .container.position-relative.zindex-2.py-5.pb-lg-0
+      nav(aria-label='breadcrumb')
+        ol.pt-lg-2.pb-1.breadcrumb
+          li.breadcrumb-item: a(href='/index.html') Home
+          li.breadcrumb-item: a(href='/en/portfolio.html') Portfolio
+          li.breadcrumb-item.active(aria-current='page') Bul Yacht
+      .d-lg-flex.align-items-center.pt-3.pb-xxl-5
+        img.d-block.order-lg-2.me-auto.me-lg-0.ms-auto(src='../../assets/img/portfolio/bulyacht/hero.png' width='480' alt='Image')
+        .order-lg-1.text-center.text-lg-start.pe-lg-4.py-4.py-md-5
+          h1.display-2.text-uppercase.pb-3.pb-lg-4 Discover Luxury at Sea: BulYacht
+          p.fs-lg.mx-auto.mx-lg-0.mb-0(style='max-width: 530px;') Navigate Your Dream Voyage with BulYacht in Greece.
+
+  //- Content
+  section.container.overflow-hidden.pt-lg-2.pt-xl-4.pt-xxl-5
+    .row.py-sm-3.py-md-4.py-lg-5
+      //- Sticky sidebar
+      .col-md-3.col-lg-2
+        .d-flex.d-md-block.flex-wrap.position-sticky.top-0
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Company
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 BulYacht
+              li.d-block.py-1 5-10 employees
+              li.d-block.py-1 Greece
+              li.d-block.py-1: a.text-dark(href='https://bulyacht.com/' target='_blank') Visit website
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Indusrty
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Luxury travel and tourism
+          .pb-3.mb-2.mb-lg-4.me-5.me-md-0
+            h2.fs-base.fw-normal.text-muted.mb-2 Services
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 Web Development
+              li.d-block.py-1 Brand Integration
+          .pb-3.mb-2.mb-lg-4
+            h2.fs-base.fw-normal.text-muted.mb-2 Time spent
+            ul.list-unstyled.fs-lg.fw-semibold.text-dark.mb-0
+              li.d-block.py-1 2024, 3-4 months
+
+      //- Description
+      .col-md-9.offset-lg-1
+        .ps-md-4.ps-lg-0
+          .border-bottom.pb-3.pb-sm-4.pb-lg-5.mb-4
+            p.text-dark.lead.mb-md-2.mb-lg-3.mb-xl-4 Discover how we crafted an elegant and user-friendly website for BulYacht, showcasing their luxury yacht trips in Greece with detailed information on destinations, amenities, pricing, and availability to enhance the booking experience.
+          h2.h1.pt-2.pt-sm-3.pt-md-4.pt-lg-5.pb-2 About the client
+          p.fs-lg BulYacht is a premier luxury yacht charter company offering exclusive trips across the breathtaking waters of Greece. Specializing in creating unforgettable sailing experiences, they cater to those seeking an extraordinary journey through Greece's stunning islands and coastlines. Every trip is tailored to provide unparalleled comfort and style, ensuring a memorable getaway.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 The challenge
+          p.fs-lg BulYacht needed a website that effectively conveyed the luxury and exclusivity of their yacht trips while providing essential information to potential clients. The site had to showcase various destinations, amenities, pricing, and real-time availability to streamline the booking process. It was crucial for the website to reflect BulYacht's brand identity and offer an intuitive user experience.
+          h2.h1.pt-3.pt-sm-4.pt-xl-5.pb-2 The solution
+          p.fs-lg.mb-0 We developed a user-friendly website that captures the essence of BulYacht's luxurious offerings. The site features dedicated sections for destinations, amenities, pricing, and availability, allowing visitors to explore and plan their perfect yacht trip easily. To align with BulYacht's brand identity, we focused on a color scheme that combines blue and turquoise, reflecting the vibrant colors of the sea. The responsive design ensures seamless navigation across all devices, providing users with a premium online experience.
+
+    //- Results
+    .row.pt-1.pt-sm-3.pt-md-4.pb-5.mb-md-2.mb-lg-3.mb-xl-4.mb-xxl-5
+      .col-md-11.col-lg-9.col-xl-8.pb-1.pb-sm-3.pb-md-4
+        h2.h1.pb-sm-2.pb-lg-3 Results
+        p.fs-lg.mb-0 The new website has successfully elevated BulYacht's online presence, attracting more inquiries and bookings. Visitors now have a clear understanding of the luxurious experiences offered, leading to increased engagement and customer satisfaction.
+
+  //- Parallax background image
+  section.jarallax(data-jarallax data-speed='0.6')
+    .ratio.ratio-16x9
+    .jarallax-img(style='background-image: url(../../assets/img/portfolio/bulyacht/paralax.png);')
+
+  //- Testimonials (empty)
+  section.container.position-relative.zindex-2.py-5.mt-n1.mt-sm-0.mb-1.my-md-3.my-lg-3.my-xl-4.my-xxl-5
+
+  //- Next projects
+  section.container.pb-5.mb-2.mb-lg-3.mb-xl-4.mb-xxl-5
+    h2.h1.pb-3.pb-lg-4 Next projects
+    .row.row-cols-1.row-cols-sm-2.align-items-end.mb-2.pb-md-4
+      .col
+        .zoom-effect.position-relative.border-bottom.pb-3(style='max-width: 550px;')
+          .zoom-effect-wrapper
+            .zoom-effect-img: img(src='../../assets/img/portfolio/partdepot/grid.png' alt='Image')
+          .pt-4.mt-lg-2
+            h2.h4.mb-2: a.stretched-link(href='partdepot.html') PArt Depot
+            .d-flex.justify-content-between.fs-lg.text-muted
+              span Web Development, Schedule Integration
+              span 2023
+
+block extraScripts
+  script(src='../../assets/vendor/aos/dist/aos.js')
+  script(src='../../assets/vendor/jarallax/dist/jarallax.min.js')
+  script(src='../../assets/vendor/swiper/swiper-bundle.min.js')

@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp",
+    "build:html": "gulp pug",
     "demo": "echo \"for Vercel static deployment\" && exit 0"
   },
   "author": "https://createx.studio/",

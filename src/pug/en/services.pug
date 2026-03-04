@@ -1,0 +1,190 @@
+extends ../layouts/_layout-en.pug
+
+block vars
+  - var title = 'ZT Code Craft | Services'
+  - var assetPath = '../'
+  - var altLangUrl = '/bg/services.html'
+
+block extraStyles
+  link(rel='stylesheet' media='screen' href='../assets/vendor/swiper/swiper-bundle.min.css')
+
+block content
+  //- Hero
+  section.bg-secondary.py-5
+    .container.pb-lg-2.pb-xl-4.py-xxl-5
+      nav(aria-label='breadcrumb')
+        ol.pt-lg-3.pb-lg-4.pb-2.breadcrumb
+          li.breadcrumb-item: a(href='/') Home
+          li.breadcrumb-item.active(aria-current='page') Services
+      h1.display-2.mb-4.text-center.zt-blue Our services
+      p.text-center.pb-4.mb-2.mb-lg-3.fw-500.subheading-font
+        | ZT Code Craft is a creative studio specialising in
+        br
+        b.zt-pink website development &amp; brand establishment,
+        br
+        | dedicated to help you grow your business.
+
+  //- Services
+  .container.py-4
+    //- Website in 2 Weeks
+    section.row.align-items-center.pb-5.py-xl-5.my-2#quick-website
+      .col-md-6.offset-xl-1.order-md-2.pb-2.mb-4.mb-md-0
+        img.rounded-5(src='../assets/img/services/web-2.png' alt='Image')
+      .col-md-6.col-xl-5.order-md-1
+        .pe-md-4.pe-xl-0.pb-4
+          h2.h1.pb-2.pb-lg-3.zt-blue Website in Two Weeks
+          dl.pb-2
+            dt Quick Launch
+            dd Get your business online fast with a fully functional website in just two weeks.
+            dt Essential Pages Included
+            dd
+              | Receive
+              b.zt-pink  up to 5 pages
+              |  tailored to your business needs, including options like Home, About, Contacts, Menu/Schedule, and Map.
+              |  You have the flexibility to choose the specific pages that best showcase your business.
+              |  These pages will be thoughtfully
+              b.zt-pink  designed from our templates
+              | , ensuring a polished and professional appearance.
+            dt No Extra Costs, No Monthly Fees
+            dd Everything you need for your website, including hosting (a place for your website to live on the internet) and security (SSL), is covered in one payment. Plus, there are no extra charges or monthly fees. It's all taken care of upfront, making it easy and transparent for you.
+          .row.row-cols-2.mb-4
+            a.btn.btn-primary(href='/en/contacts.html') Let's work together
+
+    //- Custom Website / Dynamic Features
+    section.row.align-items-center.pb-5.py-xl-5.my-2#custom-website
+      .col-md-6.pb-2.mb-4.mb-md-0
+        img.rounded-5(src='../assets/img/services/integrations-2.png' alt='Image')
+      .col-md-6.col-xl-5.offset-xl-1
+        .ps-md-4.pe-xl-0
+          h2.h1.pb-2.pb-lg-3.zt-pink Option for Dynamic Features
+          dl.pb-2
+            dt Incorporate advanced functionalities tailored to your specific requirements and business goals.
+            dd
+              ul
+                li booking systems
+                li email integrations, newsletters
+                li analytics tools - Google Analytics
+            dt Custom Admin Panel
+            dd Give your clients full control to update content, images, and more — directly from their browser, no technical knowledge required.
+          a.btn.btn-primary(href='/en/contacts.html') Let's work together
+
+    //- How it works
+    section.bg-secondary.pt-2.mt-md-3.mt-lg-2.mt-xl-4.mt-xxl-3.pb-5
+      .container.pt-2.pt-sm-4.pt-lg-5
+        h2.h1.text-center.pb-3.mb-3.mb-lg-4 How does the process work?
+
+        //- Step 01
+        .row.align-items-center.position-relative.pb-5.pb-lg-0.mb-1.mb-sm-2.mb-md-4.mb-lg-0
+          .col-md-6.col-xl-5.offset-lg-1.order-md-2.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-xl-1.order-md-1(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .pe-md-4.pe-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Step 01
+              h3.h2.mb-3.mb-lg-4 Book a Call and Define Your Vision
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5 Kick off your journey by scheduling a call with us. We'll dive into your business needs, discuss which services align with your goals, and agree on the specific requirements to bring your vision to life. In this step of the process we will discuss timeframes, requirements, and pricing.
+              a.btn.btn-outline-primary.rounded-pill(href='/en/contacts.html') Book a call
+
+        //- Arrow 1
+        .d-none.d-lg-flex.justify-content-center(data-aos='fade-in' data-aos-duration='500' data-aos-offset='250')
+          svg.d-block.text-primary(width='339' height='365' viewBox='0 0 339 365' fill='none' xmlns='http://www.w3.org/2000/svg' style='margin-left: -150px; margin-top: -140px; margin-bottom: -108px')
+            path(d='M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606' stroke='url(#arrow1)' stroke-width='2' stroke-linecap='round' stroke-dasharray='6 6')
+            path(d='M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z' fill='currentColor')
+            defs
+              linearGradient#arrow1(x1='324' y1='291.5' x2='-2.99974' y2='72.4997' gradientUnits='userSpaceOnUse')
+                stop(offset='0' stop-color='currentColor')
+                stop(offset='1' stop-color='currentColor' stop-opacity='0')
+
+        //- Step 02
+        .row.align-items-center.position-relative.pb-5.pb-lg-0.mb-1.mb-sm-2.mb-md-4.mb-lg-0
+          .col-md-6.col-xl-5.offset-xl-1.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-lg-1(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .ps-md-4.ps-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Step 02
+              h3.h2.mb-3.mb-lg-4 Development Phase - Your Vision, Your Way
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5 In the development phase, whether it's building a website or defining your brand, the control is in your hands. Feel free to engage as much as you prefer, or entrust everything to us – your time is precious. Our aim is collaboration, guaranteeing that your project reflects your unique identity.
+
+        //- Arrow 2
+        .d-none.d-lg-flex.justify-content-center(data-aos='fade-in' data-aos-duration='500' data-aos-offset='250')
+          svg.d-block.text-primary(width='263' height='275' viewBox='0 0 263 275' fill='none' xmlns='http://www.w3.org/2000/svg' style='margin-top: -60px; margin-left: -120px; margin-bottom: -80px')
+            path(d='M8.13678 249.647C7.47108 250.081 6.59001 249.602 6.59106 248.808L6.60444 238.689C6.60544 237.931 7.4158 237.45 8.08162 237.811L16.5478 242.408C17.2136 242.77 17.2512 243.712 16.6163 244.125L8.13678 249.647Z' fill='currentColor')
+            path(d='M261.961 37.8891C216.908 65.6243 128.226 135.486 133.916 193.05C141.029 265.005 265.134 173.468 173.666 148.634C89.2542 125.715 30.9125 210.547 13.9796 236.702' stroke='url(#arrow2)' stroke-width='2' stroke-linecap='round' stroke-dasharray='6 6')
+            defs
+              linearGradient#arrow2(x1='13.9797' y1='234.5' x2='276.704' y2='60.1939' gradientUnits='userSpaceOnUse')
+                stop(offset='0' stop-color='currentColor')
+                stop(offset='1' stop-color='currentColor' stop-opacity='0')
+
+        //- Step 03
+        .row.align-items-center.position-relative
+          .col-md-6.col-xl-5.offset-lg-1.order-md-2.d-md-flex.justify-content-end.pb-2.pb-md-0.mb-4.mb-md-0(data-aos='fade-left' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+          .col-md-6.col-lg-5.col-xl-4.offset-xl-1.order-md-1(data-aos='fade-right' data-aos-duration='500' data-aos-offset='250' data-disable-parallax-down='md')
+            .pe-md-4.pe-lg-0
+              span.badge.fs-sm.bg-faded-primary.text-primary.mb-3.mb-lg-4 Step 03
+              h3.h2.mb-3.mb-lg-4 Handover - Your Project, Your Success
+              p.pb-1.pb-lg-0.mb-4.mb-lg-5 The final step is the handover. Your fully developed website or established brand is now ready for its debut. We pass the reins back to you, equipped with the tools for digital success.
+
+    //- FAQ
+    section.py-5
+      .container.py-lg-3.py-xl-5
+        .row.pt-1.pb-2.py-sm-4
+          .col-md-4.text-center.text-md-start
+            h2.h1.zt-blue Any questions? Check out the FAQ
+            p.pb-3.pb-sm-4.zt-pink Didn't find what you are looking for here? Feel free to contact us.
+            .d-none.d-md-flex.justify-content-center
+              svg.zt-pink.ms-n4(width='200' height='211' viewBox='0 0 200 211' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z' fill='currentColor')
+          .col-md-8.col-lg-7.offset-lg-1
+            #faq.accordion
+              .accordion-item.bg-light
+                h3.accordion-header#headingOne
+                  button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#questionOne' aria-expanded='true' aria-controls='questionOne') How much would a website cost?
+                #questionOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#faq')
+                  .accordion-body.fs-sm For a simple static website, the cost is €300. However, additional features like custom integrations or dynamic features (e.g. booking, payments, custom forms), may incur additional charges based on your specific requirements.
+              .accordion-item.bg-light
+                h3.accordion-header#headingTwo
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionTwo' aria-expanded='false' aria-controls='questionTwo') Are There Any Extra Costs?
+                #questionTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | For static websites,
+                    b  there are no monthly fees
+                    |  — unlike platforms like WordPress or Wix that charge recurring subscriptions. We work on a one-time payment basis and include complimentary hosting and an SSL certificate at no extra cost.
+                    br
+                    br
+                    | The only ongoing cost is your domain name.
+                    br
+                    br
+                    | For more complex websites — such as those requiring an admin panel, a booking platform, or other advanced functionality — a fixed additional charge applies. Any future updates or additional work requested after the project is delivered will also be charged separately.
+              .accordion-item.bg-light
+                h3.accordion-header#headingThreeA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionThree' aria-expanded='false' aria-controls='questionThree') How long does it take to complete a website?
+                #questionThree.accordion-collapse.collapse(aria-labelledby='headingThreeA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | The timeline varies based on the complexity of the project.
+                    b  For our introductory service - Website In Two Weeks, the development phase spans a two-week duration.
+                    |  We'll provide you with an estimated timeframe during our initial consultation.
+              .accordion-item.bg-light
+                h3.accordion-header#headingThreeB
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionFour' aria-expanded='false' aria-controls='questionFour') Can I update my website content after it goes live?
+                #questionFour.accordion-collapse.collapse(aria-labelledby='headingThreeB' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | Absolutely! You have the flexibility to make a
+                    b  one-time payment for specific website updates or opt for a monthly subscription for ongoing changes.
+                    br
+                    | Alternatively,
+                    b  we can develop a custom admin panel
+                    |  for your website, giving you full control to update content, images, and more — directly from your browser, no technical knowledge required.
+              .accordion-item.bg-light
+                h3.accordion-header#headingFourA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionFive' aria-expanded='false' aria-controls='questionFive') What happens if my website experiences technical issues?
+                #questionFive.accordion-collapse.collapse(aria-labelledby='headingFourA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm
+                    | In the unlikely event that your website encounters technical issues, rest assured we've got you covered. Reach out to us, and
+                    b  we'll promptly address and resolve any technical issues free of charge
+                    | . At ZT Code Craft, your website is in good hands, and we guarantee the quality of our service.
+              .accordion-item.bg-light
+                h3.accordion-header#headingFiveA
+                  button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#questionSix' aria-expanded='false' aria-controls='questionSix') Can you help with content creation and illustrations for the website?
+                #questionSix.accordion-collapse.collapse(aria-labelledby='headingFiveA' data-bs-parent='#faq')
+                  .accordion-body.fs-sm Absolutely! As part of our comprehensive branding service, we offer assistance with content creation and illustrations to ensure your website not only looks fantastic but also tells a compelling and visually engaging story. Let us bring your brand to life with captivating content and eye-catching visuals.
+
+block extraScripts
+  script(src='../assets/vendor/jarallax/dist/jarallax.min.js')
+  script(src='../assets/vendor/swiper/swiper-bundle.min.js')
